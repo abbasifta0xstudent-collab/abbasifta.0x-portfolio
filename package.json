@@ -1,0 +1,28 @@
+{
+  "name": "abu-bakar-siddique-portfolio",
+  "version": "1.0.0",
+  "description": "Official Professional Portfolio of Abu Bakar Siddique - Student Leader, Young Innovator, Certified Scout & Writer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "backup": "node scripts/backup.js",
+    "security:check": "npm audit"
+  },
+  "keywords": [
+    "portfolio",
+    "abu-bakar-siddique",
+    "student-leader",
+    "scout",
+    "innovator",
+    "solar-tracker",
+    "writer",
+    "ghs-mazhar-ul-aloom"
+  ],
+  "author": "Abu Bakar Siddique",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abu Bakar Siddique | Executive Presentation Portfolio</title>
+  
+  <!-- SEO Meta -->
+  <meta name="description" content="Official Executive Presentation Portfolio of Abu Bakar Siddique - Student President at GHS Mazhar Ul Aloom Fort Abbas, Certified Scout, Young STEM Innovator building a Smart Solar Tracker, and Author of Safar-e-Zayan." />
+  <meta name="keywords" content="Abu Bakar Siddique, Portfolio, Safar-e-Zayan, GHS Mazhar Ul Aloom, Fort Abbas, Bahawalnagar, Bahawalpur, Punjab, Pakistan, Student President, Scout, Solar Tracker, Character Building Society" />
+  <meta name="author" content="Abu Bakar Siddique" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main Stylesheet (Relative Path for 100% Portability) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="site-body">
+
+  <!-- Ambient Backdrop -->
+  <div class="deck-backdrop">
+    <div class="deck-glow orb-1"></div>
+    <div class="deck-glow orb-2"></div>
+  </div>
+
+  <!-- Top Quick Header Bar -->
+  <header class="top-nav-bar">
+    <div class="container d-flex justify-between align-center">
+      <div class="top-badge-left">
+        <span class="status-indicator"></span>
+        <span id="dynTopTitle"><strong>Abu Bakar Siddique:</strong> Student President • Certified Scout • STEM Innovator</span>
+      </div>
+      <div class="top-badge-right">
+        <span><i class="fa-solid fa-location-dot text-amber"></i> <span id="dynTopLocation">Fort Abbas, Punjab, Pakistan</span></span>
+        <span class="sep">•</span>
+        <a href="mailto:abbasifta0x@gmail.com" class="top-email-link" id="dynTopEmail"><i class="fa-regular fa-envelope"></i> abbasifta0x@gmail.com</a>
+        <span class="sep">•</span>
+        <button id="themeToggle" class="theme-switch-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="admin.html" class="btn-admin-pill" title="Admin CMS Panel">
+          <i class="fa-solid fa-lock"></i>
+          <span>Admin</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Presentation Container -->
+  <main class="presentation-container">
+
+    <!-- ==========================================
+         SLIDE 1: HERO / COVER SLIDE
+         ========================================== -->
+    <section class="deck-slide slide-hero" id="hero">
+      <div class="slide-card hero-card">
+        <div class="hero-left-accent"></div>
+        <div class="hero-slide-grid">
+          
+          <!-- Left Content -->
+          <div class="hero-slide-content">
+            <div class="hero-kicker-badge">
+              <span class="kicker-line"></span>
+              <span>READY TO LEAD & INNOVATE</span>
+            </div>
+
+            <h1 class="hero-giant-title">
+              I'M ABU BAKAR <br/>
+              <span class="amber-highlight" id="dynHeroLastName">SIDDIQUE</span>
+            </h1>
+
+            <p class="hero-role-subtitle">
+              STUDENT PRESIDENT / STEM RESEARCHER / CERTIFIED SCOUT
+            </p>
+
+            <div class="hero-divider"></div>
+
+            <p class="hero-deck-desc" id="dynHeroBio">
+              16-year-old 10th-grade student at <strong>Government High School Mazhar Ul Aloom, Fort Abbas</strong>. 
+              Serving with dedication as <strong>School President</strong>, heading the <strong>Character Building Society</strong>, holding recognized <strong>Scout Certification</strong>, authoring the philosophical novel <strong>"Safar-e-Zayan"</strong>, and engineering an intelligent <strong>Dual-Axis Solar Tracker</strong>.
+            </p>
+
+            <div class="hero-action-row">
+              <a href="#about" class="btn-deck-black">
+                <span>MORE ABOUT ME</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#projects" class="btn-deck-yellow">
+                <i class="fa-solid fa-solar-panel"></i>
+                <span>SOLAR INNOVATION</span>
+              </a>
+              <button class="btn-deck-outline" id="viewResumeBtn">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>PRINT PROFILE</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Content: Circular Portrait with Gold Orbit Arc -->
+          <div class="hero-slide-visual">
+            <div class="hero-portrait-circle-wrap">
+              <div class="hero-orbit-arc">
+                <span class="orbit-node node-1"></span>
+                <span class="orbit-node node-2"></span>
+                <span class="orbit-node node-3"></span>
+                <span class="orbit-node node-4"></span>
+                <span class="orbit-node node-5"></span>
+              </div>
+              <div class="hero-portrait-circle">
+                <img 
+                  id="dynProfileImg"
+                  src="https://i.pinimg.com/736x/0b/c8/ee/0bc8ee81c3d7c7ac7214db26cbb908a0.jpg" 
+                  alt="Abu Bakar Siddique" 
+                  class="portrait-img"
+                  loading="eager"
+                  onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 2: ABOUT ME
+         ========================================== -->
+    <section class="deck-slide" id="about">
+      <div class="slide-card deck-card-layout">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="deck-sidebar">
+          <div class="sidebar-avatar-box">
+            <div class="avatar-circle">
+              <img src="https://i.pinimg.com/736x/0b/c8/ee/0bc8ee81c3d7c7ac7214db26cbb908a0.jpg" alt="Abu Bakar Siddique" class="sidebar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'">
+            </div>
+          </div>
+          <nav class="sidebar-menu-box">
+            <a href="#hero" class="s-nav-item">HOME</a>
+            <a href="#about" class="s-nav-item active">ABOUT ME</a>
+            <a href="#resume" class="s-nav-item">RESUME</a>
+            <a href="#projects" class="s-nav-item">PORTFOLIO</a>
+            <a href="#leadership" class="s-nav-item">LEADERSHIP</a>
+            <a href="#novel" class="s-nav-item">NOVEL</a>
+            <a href="#scouting" class="s-nav-item">SCOUTING</a>
+            <a href="#contact" class="s-nav-item">CONTACT</a>
+          </nav>
+        </aside>
+
+        <!-- Main Slide Body -->
+        <div class="deck-body">
+          <!-- Slide Title Header -->
+          <div class="deck-header">
+            <h2 class="deck-title"><span class="title-dash">—</span> ABOUT ME</h2>
+            <p class="deck-subtitle">I'm <strong>Abu Bakar Siddique</strong>, Student Leader / Researcher / Certified Scout</p>
+            <p class="deck-intro-text" id="dynAboutBio1">
+              Currently in 10th grade at <strong>Government High School Mazhar Ul Aloom Fort Abbas</strong> (District Bahawalnagar, Bahawalpur Division, Punjab, Pakistan). Dedicated to student governance, scientific innovation, community volunteering, and Urdu literature.
+            </p>
+          </div>
+
+          <!-- Two-Column Section: What I Do & Fun Facts -->
+          <div class="deck-about-grid">
+            
+            <!-- Column 1: What I Do -->
+            <div class="about-what-i-do">
+              <div class="section-pill-tag">What I Do</div>
+              
+              <div class="what-list">
+                <div class="what-item">
+                  <div class="what-icon-circle"><i class="fa-solid fa-crown"></i></div>
+                  <div class="what-txt">
+                    <h4>STUDENT GOVERNANCE</h4>
+                    <p>President of School & Head of Character Building Society.</p>
+                  </div>
+                </div>
+
+                <div class="what-item">
+                  <div class="what-icon-circle"><i class="fa-solid fa-solar-panel"></i></div>
+                  <div class="what-txt">
+                    <h4>STEM INNOVATION</h4>
+                    <p>Selected to build an Automated Dual-Axis Solar Tracker.</p>
+                  </div>
+                </div>
+
+                <div class="what-item">
+                  <div class="what-icon-circle"><i class="fa-solid fa-compass"></i></div>
+                  <div class="what-txt">
+                    <h4>CERTIFIED SCOUTING</h4>
+                    <p>PBSA Certified Scout with Murree Ghora Gali camp experience.</p>
+                  </div>
+                </div>
+
+                <div class="what-item">
+                  <div class="what-icon-circle"><i class="fa-solid fa-feather-pointed"></i></div>
+                  <div class="what-txt">
+                    <h4>LITERARY WRITING</h4>
+                    <p>Author of the upcoming philosophical novel "Safar-e-Zayan".</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Fun Facts (6 Solid Black Metric Badges) -->
+            <div class="about-fun-facts">
+              <div class="section-pill-tag">Key Highlights</div>
+              
+              <div class="fun-facts-circle-grid">
+                <!-- Badge 1 -->
+                <div class="fact-circle-item">
+                  <div class="black-stat-bubble">
+                    <span class="fact-num" id="dynStatAge">16</span>
+                    <span class="fact-sub">YEARS OLD</span>
+                  </div>
+                  <span class="fact-label">Class 10th Student</span>
+                </div>
+
+                <!-- Badge 2 -->
+                <div class="fact-circle-item">
+                  <div class="black-stat-bubble">
+                    <span class="fact-num">4+</span>
+                    <span class="fact-sub">ROLES</span>
+                  </div>
+                  <span class="fact-label">Leadership Portfolios</span>
+                </div>
+
+                <!-- Badge 3 -->
+                <div class="fact-circle-item">
+                  <div class="black-stat-bubble">
+                    <span class="fact-num">1</span>
+                    <span class="fact-sub">NOVEL</span>
+                  </div>
+                  <span class="fact-label">سفرِ زیاں (In Progress)</span>
+                </div>
+
+                <!-- Badge 4 -->
+                <div class="fact-circle-item">
+                  <div class="black-stat-bubble">
+                    <span class="fact-num">100%</span>
+                    <span class="fact-sub">ACTIVE</span>
+                  </div>
+                  <span class="fact-label">Youth Volunteering</span>
+                </div>
+
+                <!-- Badge 5 -->
+                <div class="fact-circle-item">
+                  <div class="black-stat-bubble">
+                    <span class="fact-num">1</span>
+                    <span class="fact-sub">STEM PROJ</span>
+                  </div>
+                  <span class="fact-label">Dual-Axis Solar Tracker</span>
+                </div>
+
+                <!-- Badge 6 -->
+                <div class="fact-circle-item">
+                  <div class="black-stat-bubble">
+                    <span class="fact-num">PBSA</span>
+                    <span class="fact-sub">SCOUT</span>
+                  </div>
+                  <span class="fact-label">Certified Scout</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Progress Rail -->
+        <div class="deck-rail">
+          <span class="rail-dot active"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 3: RESUME
+         ========================================== -->
+    <section class="deck-slide" id="resume">
+      <div class="slide-card deck-card-layout">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="deck-sidebar">
+          <div class="sidebar-avatar-box">
+            <div class="avatar-circle">
+              <img src="https://i.pinimg.com/736x/0b/c8/ee/0bc8ee81c3d7c7ac7214db26cbb908a0.jpg" alt="Abu Bakar Siddique" class="sidebar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'">
+            </div>
+          </div>
+          <nav class="sidebar-menu-box">
+            <a href="#hero" class="s-nav-item">HOME</a>
+            <a href="#about" class="s-nav-item">ABOUT ME</a>
+            <a href="#resume" class="s-nav-item active">RESUME</a>
+            <a href="#projects" class="s-nav-item">PORTFOLIO</a>
+            <a href="#leadership" class="s-nav-item">LEADERSHIP</a>
+            <a href="#novel" class="s-nav-item">NOVEL</a>
+            <a href="#scouting" class="s-nav-item">SCOUTING</a>
+            <a href="#contact" class="s-nav-item">CONTACT</a>
+          </nav>
+        </aside>
+
+        <!-- Main Slide Body -->
+        <div class="deck-body">
+          <div class="deck-header">
+            <h2 class="deck-title"><span class="title-dash">—</span> RESUME</h2>
+            <p class="deck-subtitle">Academic, Leadership, Scouting & Innovation Portfolio</p>
+          </div>
+
+          <div class="deck-resume-grid">
+            <!-- Col 1 -->
+            <div class="resume-col">
+              <h3 class="res-col-title">LEADERSHIP</h3>
+              <div class="res-timeline-item">
+                <h4>President of School</h4>
+                <span class="res-date">GHS Mazhar Ul Aloom</span>
+                <p>Leading student governance, morning assemblies, and academic discipline.</p>
+              </div>
+              <div class="res-timeline-item">
+                <h4>Head of CBS</h4>
+                <span class="res-date">Character Building Wing</span>
+                <p>Promoting exam ethics, honesty, anti-corruption, and civic duty.</p>
+              </div>
+              <div class="res-timeline-item">
+                <h4>Volunteer Group Founder</h4>
+                <span class="res-date">Youth Service Group</span>
+                <p>Organizing student welfare, peer tutoring, and plantation drives.</p>
+              </div>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="resume-col">
+              <h3 class="res-col-title">EDUCATION</h3>
+              <div class="res-timeline-item">
+                <h4>Class 10th (Science Group)</h4>
+                <span class="res-date">GHS Mazhar Ul Aloom</span>
+                <p>Focusing on Physics, Chemistry, Mathematics, and Computer Science.</p>
+              </div>
+              <div class="res-timeline-item">
+                <h4>Regional Heritage</h4>
+                <span class="res-date">Fort Abbas, Bahawalnagar</span>
+                <p>Bahawalpur Division, Punjab, Pakistan.</p>
+              </div>
+              <div class="res-timeline-item">
+                <h4>Extracurriculars</h4>
+                <span class="res-date">Debates & Galas</span>
+                <p>Active participation in speeches, declamations, and quiz contests.</p>
+              </div>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="resume-col">
+              <h3 class="res-col-title">SCOUTING</h3>
+              <div class="res-timeline-item">
+                <h4>Certified Scout</h4>
+                <span class="res-date">Pakistan Boy Scouts</span>
+                <p>Outdoor wilderness training, lashings, timber hitches, and knots.</p>
+              </div>
+              <div class="res-timeline-item">
+                <h4>Murree Ghora Gali Camp</h4>
+                <span class="res-date">August 2026 Milestone</span>
+                <p>High-altitude terrain training with school teachers and peers.</p>
+              </div>
+              <div class="res-timeline-item">
+                <h4>Emergency Response</h4>
+                <span class="res-date">First Aid Drills</span>
+                <p>Community aid, field stretcher preparation, and disaster drill response.</p>
+              </div>
+            </div>
+
+            <!-- Col 4 -->
+            <div class="resume-col">
+              <h3 class="res-col-title">PROJECTS & WRITING</h3>
+              <div class="res-timeline-item">
+                <h4>Smart Solar Tracker</h4>
+                <span class="res-date">Automated Dual-Axis</span>
+                <p>Selected by school to engineer an Arduino & LDR sun-tracking model.</p>
+              </div>
+              <div class="res-timeline-item">
+                <h4>سفرِ زیاں (Novel)</h4>
+                <span class="res-date">Literary Development</span>
+                <p>Philosophical fiction exploring human endurance, loss, and moral resolve.</p>
+              </div>
+              <div class="res-timeline-item">
+                <h4>Scientific Demonstrations</h4>
+                <span class="res-date">School Science Exhibitions</span>
+                <p>Presenting renewable energy prototypes to visitors and faculty.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Progress Rail -->
+        <div class="deck-rail">
+          <span class="rail-dot"></span>
+          <span class="rail-dot active"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 4: PORTFOLIO & STEM INNOVATION
+         ========================================== -->
+    <section class="deck-slide" id="projects">
+      <div class="slide-card deck-card-layout">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="deck-sidebar">
+          <div class="sidebar-avatar-box">
+            <div class="avatar-circle">
+              <img src="https://i.pinimg.com/736x/0b/c8/ee/0bc8ee81c3d7c7ac7214db26cbb908a0.jpg" alt="Abu Bakar Siddique" class="sidebar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'">
+            </div>
+          </div>
+          <nav class="sidebar-menu-box">
+            <a href="#hero" class="s-nav-item">HOME</a>
+            <a href="#about" class="s-nav-item">ABOUT ME</a>
+            <a href="#resume" class="s-nav-item">RESUME</a>
+            <a href="#projects" class="s-nav-item active">PORTFOLIO</a>
+            <a href="#leadership" class="s-nav-item">LEADERSHIP</a>
+            <a href="#novel" class="s-nav-item">NOVEL</a>
+            <a href="#scouting" class="s-nav-item">SCOUTING</a>
+            <a href="#contact" class="s-nav-item">CONTACT</a>
+          </nav>
+        </aside>
+
+        <!-- Main Slide Body -->
+        <div class="deck-body">
+          <div class="deck-header">
+            <h2 class="deck-title"><span class="title-dash">—</span> PORTFOLIO</h2>
+            <p class="deck-subtitle">Dual-Axis Smart Solar Tracker, Physics Simulation & Project Assets</p>
+          </div>
+
+          <!-- Interactive Physics Simulator & Details -->
+          <div class="deck-portfolio-split">
+            <!-- Left Info Panel -->
+            <div class="deck-solar-info">
+              <div class="project-pill-row">
+                <span class="badge-amber"><i class="fa-solid fa-circle-check"></i> Selected by School Faculty</span>
+                <span class="badge-black"><i class="fa-solid fa-bolt"></i> Solar Physics</span>
+              </div>
+              
+              <h3 class="portfolio-item-title" id="dynSolarSubTitle">Smart Dual-Axis Solar Tracker</h3>
+              
+              <p class="deck-p-desc" id="dynSolarDesc">
+                Fixed solar panels lose 35%+ solar energy. I was chosen by our teachers at <strong>GHS Mazhar Ul Aloom Fort Abbas</strong> to engineer an automated dual-axis tracker with quad light-dependent sensors and micro-servos for continuous maximum power output.
+              </p>
+
+              <div class="spec-pills" id="dynSolarTechStack">
+                <span>Arduino</span>
+                <span>LDR Sensors</span>
+                <span>Micro Servos</span>
+                <span>C++ Firmware</span>
+                <span>Solar PV</span>
+              </div>
+
+              <div class="sim-instruction-box">
+                <i class="fa-solid fa-hand-pointer text-amber"></i>
+                <span><strong>Interactive HUD:</strong> Drag the sun or click 'Auto Orbit' to watch the tracker calculate optimal alignment angles in real-time.</span>
+              </div>
+            </div>
+
+            <!-- Right Simulation Canvas -->
+            <div class="deck-solar-canvas-box">
+              <div class="sim-ctrl-row">
+                <span class="sim-indicator"><i class="fa-solid fa-satellite-dish"></i> Live Physics Canvas</span>
+                <div class="btn-group-sim">
+                  <button id="simAutoBtn" class="sim-btn active">Auto Orbit</button>
+                  <button id="simManualBtn" class="sim-btn">Manual Drag</button>
+                </div>
+              </div>
+
+              <div class="canvas-wrapper">
+                <canvas id="solarCanvas" width="460" height="280"></canvas>
+                <div class="sensor-hud-overlay">
+                  <div class="hud-col"><span class="h-lbl">Azimuth</span><span class="h-val" id="hudAzimuth">135°</span></div>
+                  <div class="hud-col"><span class="h-lbl">Tilt</span><span class="h-val" id="hudElevation">42°</span></div>
+                  <div class="hud-col"><span class="h-lbl">Efficiency</span><span class="h-val text-amber" id="hudLux">94%</span></div>
+                  <div class="hud-col"><span class="h-lbl">Status</span><span class="h-val text-emerald" id="hudState">OPTIMAL</span></div>
+                </div>
+              </div>
+
+              <div class="sim-slider-row">
+                <label for="sunSlider"><i class="fa-regular fa-sun text-amber"></i> Sun Trajectory:</label>
+                <input type="range" id="sunSlider" min="0" max="180" value="90" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Project Photos Gallery -->
+          <div class="deck-gallery-section" id="projectGalleryWrap">
+            <div class="gallery-subhead">
+              <h4><i class="fa-regular fa-images text-amber"></i> Project Visual Assets</h4>
+              <span class="gallery-count">Aspect-Ratio Optimized</span>
+            </div>
+            <div class="project-photos-grid" id="dynProjectPhotosGrid">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Progress Rail -->
+        <div class="deck-rail">
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot active"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 5: LEADERSHIP ROLES
+         ========================================== -->
+    <section class="deck-slide" id="leadership">
+      <div class="slide-card deck-card-layout">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="deck-sidebar">
+          <div class="sidebar-avatar-box">
+            <div class="avatar-circle">
+              <img src="https://i.pinimg.com/736x/0b/c8/ee/0bc8ee81c3d7c7ac7214db26cbb908a0.jpg" alt="Abu Bakar Siddique" class="sidebar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'">
+            </div>
+          </div>
+          <nav class="sidebar-menu-box">
+            <a href="#hero" class="s-nav-item">HOME</a>
+            <a href="#about" class="s-nav-item">ABOUT ME</a>
+            <a href="#resume" class="s-nav-item">RESUME</a>
+            <a href="#projects" class="s-nav-item">PORTFOLIO</a>
+            <a href="#leadership" class="s-nav-item active">LEADERSHIP</a>
+            <a href="#novel" class="s-nav-item">NOVEL</a>
+            <a href="#scouting" class="s-nav-item">SCOUTING</a>
+            <a href="#contact" class="s-nav-item">CONTACT</a>
+          </nav>
+        </aside>
+
+        <!-- Main Slide Body -->
+        <div class="deck-body">
+          <div class="deck-header">
+            <h2 class="deck-title"><span class="title-dash">—</span> LEADERSHIP</h2>
+            <p class="deck-subtitle">Student Council, Character Building Society & Youth Service</p>
+          </div>
+
+          <div class="deck-numbered-grid" id="dynLeadershipGrid">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Right Progress Rail -->
+        <div class="deck-rail">
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot active"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 6: SAFAR-E-ZAYAN (NOVEL)
+         ========================================== -->
+    <section class="deck-slide" id="novel">
+      <div class="slide-card deck-card-layout">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="deck-sidebar">
+          <div class="sidebar-avatar-box">
+            <div class="avatar-circle">
+              <img src="https://i.pinimg.com/736x/0b/c8/ee/0bc8ee81c3d7c7ac7214db26cbb908a0.jpg" alt="Abu Bakar Siddique" class="sidebar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'">
+            </div>
+          </div>
+          <nav class="sidebar-menu-box">
+            <a href="#hero" class="s-nav-item">HOME</a>
+            <a href="#about" class="s-nav-item">ABOUT ME</a>
+            <a href="#resume" class="s-nav-item">RESUME</a>
+            <a href="#projects" class="s-nav-item">PORTFOLIO</a>
+            <a href="#leadership" class="s-nav-item">LEADERSHIP</a>
+            <a href="#novel" class="s-nav-item active">NOVEL</a>
+            <a href="#scouting" class="s-nav-item">SCOUTING</a>
+            <a href="#contact" class="s-nav-item">CONTACT</a>
+          </nav>
+        </aside>
+
+        <!-- Main Slide Body -->
+        <div class="deck-body">
+          <div class="deck-header">
+            <h2 class="deck-title"><span class="title-dash">—</span> SAFAR-E-ZAYAN</h2>
+            <p class="deck-subtitle">Urdu Philosophical Fiction Novel in Development by Abu Bakar Siddique</p>
+          </div>
+
+          <div class="deck-novel-layout">
+            <div class="novel-cover-card">
+              <div class="novel-spine"></div>
+              <div class="novel-face">
+                <span class="novel-tag-badge">NOVEL IN PROGRESS</span>
+                <h3 class="novel-title-urdu" id="dynNovelTitleUrdu">سفرِ زیاں</h3>
+                <h4 class="novel-title-en" id="dynNovelTitleEn">Safar-e-Zayan</h4>
+                <div class="novel-decor-line">✦ ✦ ✦</div>
+                <p class="novel-author-tag">By Abu Bakar Siddique</p>
+              </div>
+            </div>
+
+            <div class="novel-synopsis-panel">
+              <div class="novel-badge-row">
+                <span class="badge-black"><i class="fa-solid fa-pen-nib"></i> Original Urdu Literature</span>
+                <span class="badge-amber" id="dynNovelStatus">In Active Development</span>
+              </div>
+
+              <h3 class="novel-syn-title">Synopsis & Themes</h3>
+              <p class="novel-syn-text" id="dynNovelSynopsis">
+                <strong>"سفرِ زیاں" (The Journey of Loss and Redemption)</strong> is an introspective novel exploring existential challenges, personal loss, resilience against societal pressures, and the spiritual quest for truth. It narrates the moral voyage of a resilient soul through unpredictable tribulations.
+              </p>
+
+              <div class="novel-quote-box">
+                <i class="fa-solid fa-quote-left text-amber"></i>
+                <span id="dynNovelAuthorNote">"خسارہ سفر کا اختتام نہیں، بلکہ خود شناسی کی ابتدا ہے۔"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Progress Rail -->
+        <div class="deck-rail">
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot active"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 7: CERTIFIED SCOUTING
+         ========================================== -->
+    <section class="deck-slide" id="scouting">
+      <div class="slide-card deck-card-layout">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="deck-sidebar">
+          <div class="sidebar-avatar-box">
+            <div class="avatar-circle">
+              <img src="https://i.pinimg.com/736x/0b/c8/ee/0bc8ee81c3d7c7ac7214db26cbb908a0.jpg" alt="Abu Bakar Siddique" class="sidebar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'">
+            </div>
+          </div>
+          <nav class="sidebar-menu-box">
+            <a href="#hero" class="s-nav-item">HOME</a>
+            <a href="#about" class="s-nav-item">ABOUT ME</a>
+            <a href="#resume" class="s-nav-item">RESUME</a>
+            <a href="#projects" class="s-nav-item">PORTFOLIO</a>
+            <a href="#leadership" class="s-nav-item">LEADERSHIP</a>
+            <a href="#novel" class="s-nav-item">NOVEL</a>
+            <a href="#scouting" class="s-nav-item active">SCOUTING</a>
+            <a href="#contact" class="s-nav-item">CONTACT</a>
+          </nav>
+        </aside>
+
+        <!-- Main Slide Body -->
+        <div class="deck-body">
+          <div class="deck-header">
+            <h2 class="deck-title"><span class="title-dash">—</span> SCOUTING</h2>
+            <p class="deck-subtitle">Pakistan Boy Scouts Association (PBSA) Certified Scout</p>
+          </div>
+
+          <div class="deck-scouting-grid">
+            <div class="scout-badge-box">
+              <div class="scout-crest-icon"><i class="fa-solid fa-compass"></i></div>
+              <h3 id="dynScoutTitle">Certified Scout</h3>
+              <span class="scout-corp" id="dynScoutAssoc">Pakistan Boy Scouts Association</span>
+              <p class="scout-motto">"Al-Mustaid — Be Prepared"</p>
+            </div>
+
+            <div class="scout-details-box">
+              <h4>Discipline, Service & Outdoor Skills</h4>
+              <p id="dynScoutDesc">
+                Trained in essential scouting tenets including wilderness navigation, rope knots, lashings, timber hitches, first aid drills, and civic emergency assistance.
+              </p>
+
+              <div class="scout-camp-callout">
+                <i class="fa-solid fa-mountain-sun text-amber"></i>
+                <div>
+                  <strong>Expedition Milestone:</strong>
+                  <span id="dynScoutCamp">Participated with school teachers and fellow students at the Ghora Gali Scout Camp (Murree) in August 2026 for high-altitude training drills.</span>
+                </div>
+              </div>
+
+              <div class="scout-law-box">
+                <span class="sl-title">The Scout Law:</span>
+                <p id="dynScoutLaw">"A scout is trustworthy, loyal, helpful, friendly, courteous, kind, obedient, cheerful, thrifty, brave, clean, and reverent."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Progress Rail -->
+        <div class="deck-rail">
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot active"></span>
+          <span class="rail-dot"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 8: CONTACT & ADMIN CMS
+         ========================================== -->
+    <section class="deck-slide" id="contact">
+      <div class="slide-card deck-card-layout">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="deck-sidebar">
+          <div class="sidebar-avatar-box">
+            <div class="avatar-circle">
+              <img src="https://i.pinimg.com/736x/0b/c8/ee/0bc8ee81c3d7c7ac7214db26cbb908a0.jpg" alt="Abu Bakar Siddique" class="sidebar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'">
+            </div>
+          </div>
+          <nav class="sidebar-menu-box">
+            <a href="#hero" class="s-nav-item">HOME</a>
+            <a href="#about" class="s-nav-item">ABOUT ME</a>
+            <a href="#resume" class="s-nav-item">RESUME</a>
+            <a href="#projects" class="s-nav-item">PORTFOLIO</a>
+            <a href="#leadership" class="s-nav-item">LEADERSHIP</a>
+            <a href="#novel" class="s-nav-item">NOVEL</a>
+            <a href="#scouting" class="s-nav-item">SCOUTING</a>
+            <a href="#contact" class="s-nav-item active">CONTACT</a>
+          </nav>
+        </aside>
+
+        <!-- Main Slide Body -->
+        <div class="deck-body">
+          <div class="deck-header">
+            <h2 class="deck-title"><span class="title-dash">—</span> CONTACT ME</h2>
+            <p class="deck-subtitle">Reach out for academic collaborations, science inquiries, or leadership engagements.</p>
+          </div>
+
+          <div class="deck-contact-split">
+            <!-- Left Contact Info -->
+            <div class="contact-info-col">
+              <div class="contact-card-box">
+                <div class="c-icon-circle"><i class="fa-regular fa-envelope"></i></div>
+                <div>
+                  <span class="c-lbl">Official Email</span>
+                  <a href="mailto:abbasifta0x@gmail.com" class="c-val-email" id="dynContactEmail">abbasifta0x@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-card-box">
+                <div class="c-icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="c-lbl">Location</span>
+                  <span class="c-val-txt">Fort Abbas, Bahawalnagar, Bahawalpur, Punjab, Pakistan</span>
+                </div>
+              </div>
+
+              <div class="contact-card-box">
+                <div class="c-icon-circle"><i class="fa-solid fa-building-columns"></i></div>
+                <div>
+                  <span class="c-lbl">Institution</span>
+                  <span class="c-val-txt">Government High School Mazhar Ul Aloom</span>
+                </div>
+              </div>
+
+              <div class="admin-quick-card">
+                <div class="aq-head">
+                  <i class="fa-solid fa-lock text-amber"></i>
+                  <strong>Admin CMS Panel</strong>
+                </div>
+                <p>Edit website content, photo aspect ratios, and novel updates securely.</p>
+                <a href="admin.html" class="btn-deck-yellow btn-small">Open Admin CMS</a>
+              </div>
+            </div>
+
+            <!-- Right Interactive Form -->
+            <div class="contact-form-col">
+              <form id="contactForm" class="deck-contact-form">
+                <!-- Anti-Spam Bot Honeypot Field (Invisible to human users) -->
+                <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
+                <div class="form-group">
+                  <label for="cName">Your Name</label>
+                  <input type="text" id="cName" name="name" placeholder="e.g. Professor / Student / Collaborator" maxlength="100" required />
+                </div>
+                <div class="form-group">
+                  <label for="cEmail">Your Email</label>
+                  <input type="email" id="cEmail" name="email" placeholder="e.g. name@example.com" maxlength="120" required />
+                </div>
+                <div class="form-group">
+                  <label for="cMessage">Message</label>
+                  <textarea id="cMessage" name="message" rows="4" placeholder="Write your message or inquiry here..." maxlength="3000" required></textarea>
+                </div>
+                <button type="submit" class="btn-deck-black btn-block">
+                  <i class="fa-regular fa-paper-plane"></i>
+                  <span>Send Message</span>
+                </button>
+                <div id="contactFeedback" class="form-feedback"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Progress Rail -->
+        <div class="deck-rail">
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot"></span>
+          <span class="rail-dot active"></span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="deck-footer">
+    <div class="container d-flex justify-between align-center">
+      <span>© 2026 Abu Bakar Siddique. All Rights Reserved.</span>
+      <span>Government High School Mazhar Ul Aloom Fort Abbas</span>
+    </div>
+  </footer>
+
+  <!-- Printable Resume Modal -->
+  <div id="resumeModal" class="resume-modal-backdrop">
+    <div class="resume-modal-sheet">
+      <div class="modal-top-actions">
+        <button id="printNowBtn" class="btn-modal-action"><i class="fa-solid fa-print"></i> Print</button>
+        <button id="closeResumeModal" class="btn-modal-action btn-close-x"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="printable-resume-body">
+        <h2 class="pr-name">Abu Bakar Siddique</h2>
+        <p class="pr-meta">Student President • Certified Scout • STEM Innovator • Novelist</p>
+        <p class="pr-contact">Fort Abbas, Bahawalnagar, Punjab, Pakistan | abbasifta0x@gmail.com</p>
+        <hr class="pr-hr"/>
+        <h3>Education & Institution</h3>
+        <p><strong>Government High School Mazhar Ul Aloom, Fort Abbas</strong> (Class 10th - Science Group)</p>
+        <h3>Leadership</h3>
+        <p><strong>President of School:</strong> Head of Student Council & Morning Assembly Governance</p>
+        <p><strong>Head of Character Building Society:</strong> Academic Integrity & Anti-Corruption Campaigns</p>
+        <p><strong>Volunteer Group Founder:</strong> Peer Tutoring & Social Welfare</p>
+        <h3>Science & Innovation</h3>
+        <p><strong>Smart Dual-Axis Solar Tracker:</strong> Automated sun-tracking system with Arduino & LDR array.</p>
+        <h3>Scouting</h3>
+        <p><strong>Certified Scout (PBSA):</strong> Outdoor navigation, pioneering, Ghora Gali Murree Camp (Aug 2026).</p>
+        <h3>Literature</h3>
+        <p><strong>سفرِ زیاں (Safar-e-Zayan):</strong> Urdu philosophical fiction novel in active development.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts (Relative Path for 100% Portability) -->
+  <script src="js/solar-tracker-sim.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

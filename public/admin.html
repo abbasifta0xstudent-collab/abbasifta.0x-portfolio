@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Control Panel | Abu Bakar Siddique Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Admin Stylesheet -->
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+
+  <!-- Login Gate Modal / Card -->
+  <div class="login-backdrop" id="loginBackdrop">
+    <div class="login-card">
+      <div class="login-crest">ABS</div>
+      <h2>Executive CMS Portal</h2>
+      <p class="login-sub">Enter the administrator password to edit website contents.</p>
+      
+      <form id="loginForm" class="login-form">
+        <div id="loginError" class="admin-alert error-alert hidden"></div>
+        <div class="form-field">
+          <label for="adminPassword">Master Admin Password</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="adminPassword" required placeholder="Enter master password..." autocomplete="current-password" />
+            <button type="button" id="togglePasswordBtn" class="pwd-toggle-btn" aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="admin2faPin">Two-Factor Authentication (2FA PIN)</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-shield-halved text-amber"></i>
+            <input type="password" id="admin2faPin" placeholder="Enter 6-digit 2FA PIN (Default: 195489)" maxlength="10" autocomplete="one-time-code" />
+          </div>
+          <small style="color: #94a3b8; font-size: 0.72rem; margin-top: 4px; display: block;">Protected by IP Brute-Force Shield (Max 5 attempts / 30m lock)</small>
+        </div>
+        <button type="submit" class="btn-admin-primary btn-block" id="loginSubmitBtn">
+          <span>Authenticate & Access Dashboard</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+      <div class="login-footer">
+        <a href="/" class="back-home-link"><i class="fa-solid fa-house"></i> Return to Live Website</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Admin Dashboard (Hidden until login) -->
+  <div class="admin-dashboard-wrapper hidden" id="adminDashboard">
+    <!-- Admin Top Header -->
+    <header class="admin-topbar">
+      <div class="admin-container d-flex justify-between align-center">
+        <div class="admin-brand">
+          <div class="admin-mini-crest">ABS</div>
+          <div>
+            <h1 class="admin-title">Content Management Center</h1>
+            <span class="admin-status-tag"><i class="fa-solid fa-circle text-emerald"></i> Authenticated Admin</span>
+          </div>
+        </div>
+
+        <div class="admin-actions">
+          <a href="/" target="_blank" class="btn-admin-outline">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Live Site</span>
+          </a>
+          <button id="saveTopBtn" class="btn-admin-gold">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Publish Changes</span>
+          </button>
+          <button id="logoutBtn" class="btn-admin-icon" title="Logout">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area with Tabs -->
+    <main class="admin-container admin-main-layout">
+      <!-- Left Sidebar Navigation -->
+      <aside class="admin-sidebar">
+        <div class="nav-section-title">Sections Manager</div>
+        <nav class="admin-tabs-list">
+          <button class="tab-btn active" data-tab="tab-personal">
+            <i class="fa-regular fa-user"></i>
+            <span>Personal & Bio</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-solar">
+            <i class="fa-solid fa-solar-panel"></i>
+            <span>Solar Project & Photos</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-leadership">
+            <i class="fa-solid fa-crown"></i>
+            <span>Leadership Portfolios</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-scouting">
+            <i class="fa-solid fa-compass"></i>
+            <span>Certified Scouting</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-novel">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Novel: Safar-e-Zayan</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-activities">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Extra-Curricular</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-contact">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Contact & Info</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-info-card">
+          <i class="fa-solid fa-wand-magic-sparkles text-gold"></i>
+          <p>Changes saved here automatically update the live portfolio without manual coding.</p>
+        </div>
+      </aside>
+
+      <!-- Right Form Content -->
+      <section class="admin-content-panel">
+        <div id="saveToast" class="admin-toast hidden"></div>
+
+        <form id="adminContentForm">
+          
+          <!-- Tab 1: Personal & Bio -->
+          <div class="tab-pane active" id="tab-personal">
+            <div class="pane-header">
+              <h2><i class="fa-regular fa-user text-gold"></i> Personal Identity & Hero Details</h2>
+              <p>Configure your primary name, bio summary, institution, age, and profile picture.</p>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Full Name</label>
+                <input type="text" id="p_name" name="personal.name" required />
+              </div>
+              <div class="form-field">
+                <label>Primary Title Tagline</label>
+                <input type="text" id="p_title" name="personal.title" required />
+              </div>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-field">
+                <label>Age</label>
+                <input type="number" id="p_age" name="personal.age" required />
+              </div>
+              <div class="form-field">
+                <label>Class / Grade</label>
+                <input type="text" id="p_grade" name="personal.grade" required />
+              </div>
+              <div class="form-field">
+                <label>School Name</label>
+                <input type="text" id="p_school" name="personal.school" required />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Profile Image URL</label>
+              <div class="image-url-preview-row">
+                <input type="url" id="p_profileImage" name="personal.profileImage" placeholder="https://..." required />
+                <div class="mini-img-preview">
+                  <img id="profileImgPreview" src="" alt="Preview" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-field">
+                <label>Town / City</label>
+                <input type="text" id="p_town" name="personal.location.town" />
+              </div>
+              <div class="form-field">
+                <label>District</label>
+                <input type="text" id="p_district" name="personal.location.district" />
+              </div>
+              <div class="form-field">
+                <label>Division</label>
+                <input type="text" id="p_division" name="personal.location.division" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Hero Biography Narrative</label>
+              <textarea id="p_heroBio" name="personal.heroBio" rows="4"></textarea>
+            </div>
+
+            <div class="form-field">
+              <label>Typewriter Rotating Roles (One per line)</label>
+              <textarea id="p_typewriterRoles" rows="5" placeholder="Enter one role per line..."></textarea>
+            </div>
+          </div>
+
+          <!-- Tab 2: Solar Project & Photos -->
+          <div class="tab-pane" id="tab-solar">
+            <div class="pane-header">
+              <h2><i class="fa-solid fa-solar-panel text-cyan"></i> Solar Tracker Science Project & Photos</h2>
+              <p>Update project descriptions, efficiency gains, and manage project photos with aspect ratio controls.</p>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Project Title</label>
+                <input type="text" id="s_title" name="solarProject.title" />
+              </div>
+              <div class="form-field">
+                <label>Subtitle / Category</label>
+                <input type="text" id="s_subtitle" name="solarProject.subtitle" />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Selected By (Institution)</label>
+                <input type="text" id="s_selectedBy" name="solarProject.selectedBy" />
+              </div>
+              <div class="form-field">
+                <label>Efficiency Gain %</label>
+                <input type="text" id="s_efficiency" name="solarProject.efficiencyBoost" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Project Description</label>
+              <textarea id="s_desc" name="solarProject.description" rows="4"></textarea>
+            </div>
+
+            <div class="form-field">
+              <label>Key Technical Highlights (One per line)</label>
+              <textarea id="s_highlights" rows="4"></textarea>
+            </div>
+
+            <div class="form-field">
+              <label>Tech Stack Tags (Comma separated)</label>
+              <input type="text" id="s_techStack" />
+            </div>
+
+            <!-- Project Photos Manager with Aspect Ratio Selector -->
+            <div class="project-photos-manager">
+              <div class="d-flex justify-between align-center mb-3">
+                <h3 class="sub-heading"><i class="fa-regular fa-images text-gold"></i> Project Photos & Aspect Ratio Settings</h3>
+                <button type="button" class="btn-admin-sm" id="addProjectPhotoBtn">
+                  <i class="fa-solid fa-plus"></i> Add New Photo
+                </button>
+              </div>
+              
+              <p class="field-hint">Select the exact aspect ratio (16:9, 4:3, 1:1, 21:9) and image fitting so your photos render perfectly without distortion or over-merging.</p>
+
+              <div id="projectPhotosList" class="photos-list-grid">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Leadership Roles -->
+          <div class="tab-pane" id="tab-leadership">
+            <div class="pane-header">
+              <h2><i class="fa-solid fa-crown text-gold"></i> Leadership Roles & Portfolios</h2>
+              <p>Manage your appointments as School President, CBS Head, and Volunteer Leader.</p>
+            </div>
+
+            <div id="leadershipList" class="roles-editor-list">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+          <!-- Tab 4: Scouting -->
+          <div class="tab-pane" id="tab-scouting">
+            <div class="pane-header">
+              <h2><i class="fa-solid fa-compass text-emerald"></i> Certified Scouting Details</h2>
+              <p>Configure certified scout credentials, camp details, and scouting skills.</p>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Badge / Title</label>
+                <input type="text" id="sc_badgeTitle" name="scouting.badgeTitle" />
+              </div>
+              <div class="form-field">
+                <label>Scout Association</label>
+                <input type="text" id="sc_association" name="scouting.association" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Scout Leadership Description</label>
+              <textarea id="sc_desc" name="scouting.description" rows="3"></textarea>
+            </div>
+
+            <div class="form-field">
+              <label>Camp Milestone Summary (e.g. Murree Ghora Gali August 2026)</label>
+              <textarea id="sc_camp" name="scouting.campDetail" rows="3"></textarea>
+            </div>
+
+            <div class="form-field">
+              <label>The Scout Law / Motto</label>
+              <input type="text" id="sc_law" name="scouting.scoutLaw" />
+            </div>
+          </div>
+
+          <!-- Tab 5: Novel (Safar-e-Zayan) -->
+          <div class="tab-pane" id="tab-novel">
+            <div class="pane-header">
+              <h2><i class="fa-solid fa-book-open text-purple"></i> Novel: Safar-e-Zayan</h2>
+              <p>Manage synopsis, themes, and manuscript details for your book.</p>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Urdu Title</label>
+                <input type="text" id="n_urdu" name="novel.titleUrdu" />
+              </div>
+              <div class="form-field">
+                <label>English Roman Title</label>
+                <input type="text" id="n_en" name="novel.titleEn" />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Genre / Category</label>
+                <input type="text" id="n_genre" name="novel.genre" />
+              </div>
+              <div class="form-field">
+                <label>Manuscript Status</label>
+                <input type="text" id="n_status" name="novel.status" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Book Synopsis / Plot Overview</label>
+              <textarea id="n_synopsis" name="novel.synopsis" rows="5"></textarea>
+            </div>
+
+            <div class="form-field">
+              <label>Author's Note / Quotation</label>
+              <textarea id="n_note" name="novel.authorNote" rows="3"></textarea>
+            </div>
+          </div>
+
+          <!-- Tab 6: Extracurricular -->
+          <div class="tab-pane" id="tab-activities">
+            <div class="pane-header">
+              <h2><i class="fa-solid fa-trophy text-gold"></i> Extra-Curricular Activities</h2>
+              <p>Configure speech contests, science fairs, sports, and hosting activities.</p>
+            </div>
+
+            <div id="activitiesList" class="activities-editor-list">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+          <!-- Tab 7: Contact & Address -->
+          <div class="tab-pane" id="tab-contact">
+            <div class="pane-header">
+              <h2><i class="fa-regular fa-envelope text-cyan"></i> Official Contact Information</h2>
+              <p>Configure the official communication channels and location cards.</p>
+            </div>
+
+            <div class="form-field">
+              <label>Official Email Address</label>
+              <input type="email" id="c_email" name="contact.email" required />
+            </div>
+
+            <div class="form-field">
+              <label>Postal Location Summary</label>
+              <input type="text" id="c_location" name="contact.location" />
+            </div>
+
+            <div class="form-field">
+              <label>Institution Card Text</label>
+              <input type="text" id="c_school" name="contact.school" />
+            </div>
+
+            <div class="form-field">
+              <label>Leadership Office / Council Desk</label>
+              <input type="text" id="c_office" name="contact.office" />
+            </div>
+          </div>
+
+          <!-- Bottom Sticky Publish Bar -->
+          <div class="admin-bottom-bar">
+            <div class="bottom-bar-left">
+              <span id="saveStatusText" class="text-muted"><i class="fa-solid fa-check"></i> Ready to publish</span>
+            </div>
+            <div class="bottom-bar-right">
+              <button type="button" id="resetBtn" class="btn-admin-outline">Discard Unsaved</button>
+              <button type="submit" class="btn-admin-gold" id="saveBottomBtn">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <span>Publish All Changes</span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

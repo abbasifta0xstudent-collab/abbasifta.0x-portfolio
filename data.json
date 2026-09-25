@@ -1,0 +1,178 @@
+{
+  "personal": {
+    "name": "Abu Bakar Siddique",
+    "title": "Student President • Certified Scout • Young Innovator • Author",
+    "age": 16,
+    "grade": "Class 10th",
+    "school": "Government High School Mazhar Ul Aloom Fort Abbas",
+    "profileImage": "https://i.pinimg.com/736x/0b/c8/ee/0bc8ee81c3d7c7ac7214db26cbb908a0.jpg",
+    "email": "abbasifta0x@gmail.com",
+    "location": {
+      "town": "Fort Abbas",
+      "district": "Bahawalnagar",
+      "division": "Bahawalpur",
+      "province": "Punjab",
+      "country": "Pakistan"
+    },
+    "heroBio": "A passionate 16-year-old 10th-grade student at Government High School Mazhar Ul Aloom, Fort Abbas. Serving with dedication as School President, leading the Character Building Society, holding certified scouting excellence, authoring the novel 'Safar-e-Zayan', and pioneering clean energy with a smart Dual-Axis Solar Tracker.",
+    "typewriterRoles": [
+      "School President @ GHS Mazhar Ul Aloom",
+      "Certified Scout & Youth Leader",
+      "Young Innovator (Dual-Axis Solar Tracker)",
+      "Head of Character Building Society",
+      "Author of 'Safar-e-Zayan'",
+      "Youth Volunteering Group Leader"
+    ],
+    "stats": {
+      "age": 16,
+      "portfolios": "4+",
+      "scoutingIntegrity": "100%",
+      "solarEfficiency": "35%+"
+    }
+  },
+  "solarProject": {
+    "title": "Smart Dual-Axis Solar Tracker",
+    "subtitle": "Automated Sun-Tracking Photovoltaic System",
+    "selectedBy": "Government High School Mazhar Ul Aloom Fort Abbas",
+    "status": "In Active Prototyping & Calibration",
+    "efficiencyBoost": "35% - 40%",
+    "description": "Fixed solar panels experience significant efficiency loss due to changing sun angles. Selected by school faculty to develop a Dual-Axis Solar Tracker using quad LDR photoresistors and micro servo actuators to keep the solar panel perpendicular to sunlight at all times.",
+    "highlights": [
+      "Quad-LDR Sensor Matrix: Measures differential light across horizontal and vertical axes.",
+      "Dual Micro-Servo Actuation: Real-time azimuth rotation and elevation tilt.",
+      "Efficiency Maximization: Keeps perpendicular (90°) solar incidence for peak electrical output."
+    ],
+    "techStack": [
+      "Arduino Microcontroller",
+      "LDR Photoresistors",
+      "SG90 Servo Motors",
+      "Embedded C++ Algorithm",
+      "Photovoltaic Cells",
+      "CAD Prototyping"
+    ],
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1509391365360-2e959784a276?w=900&auto=format&fit=crop&q=80",
+        "caption": "Photovoltaic Solar Panel Array Concept",
+        "ratio": "16:9",
+        "fit": "cover"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&auto=format&fit=crop&q=80",
+        "caption": "Embedded Microcontroller & Circuit Hardware",
+        "ratio": "16:9",
+        "fit": "cover"
+      }
+    ]
+  },
+  "leadership": [
+    {
+      "id": "president",
+      "badge": "Student Council Head",
+      "title": "President of the School",
+      "org": "GHS Mazhar Ul Aloom Fort Abbas",
+      "description": "Elected student leader representing the student council, morning assembly governance, bridging faculty-student communication, and upholding academic discipline.",
+      "points": [
+        "Presiding over morning assemblies and campus decorum.",
+        "Organizing academic competitions, debates, and annual school events.",
+        "Channeling student feedback to school faculty and leadership."
+      ],
+      "themeColor": "gold"
+    },
+    {
+      "id": "cbs",
+      "badge": "Integrity & Values Wing",
+      "title": "Head of Character Building Society",
+      "org": "Character Building Society (CBS)",
+      "description": "Spearheading campaigns for honesty in exams, anti-corruption awareness, moral integrity, and social etiquette among high school youth.",
+      "points": [
+        "Conducting sessions on honesty, discipline, and civic ethics.",
+        "Promoting anti-cheating culture and examination integrity.",
+        "Fostering anti-bullying and supportive peer behavior."
+      ],
+      "themeColor": "emerald"
+    },
+    {
+      "id": "volunteer",
+      "badge": "Community Service",
+      "title": "Youth Volunteering Group Leader",
+      "org": "Student Social Welfare Group",
+      "description": "Co-founded with close friends to provide peer tutoring, organize tree plantation drives, and support underprivileged students with books.",
+      "points": [
+        "Organizing book and stationery sharing drives for classmates.",
+        "Leading 'Clean & Green School' tree plantation drives.",
+        "Arranging peer study groups for matric exam preparation."
+      ],
+      "themeColor": "cyan"
+    }
+  ],
+  "scouting": {
+    "badgeTitle": "Certified Scout Leader",
+    "association": "Pakistan Boy Scouts Association",
+    "description": "As a certified scout from Government High School Mazhar Ul Aloom Fort Abbas, I actively train in outdoor leadership, self-reliance, survival skills, emergency first aid, and public service.",
+    "campDetail": "In August 2026, I had the privilege of attending the provincial scouting camp at Ghora Gali, Murree alongside our school teachers and student scout peers, completing advanced wilderness drills, mountain navigation, and team resilience training.",
+    "scoutLaw": "A Scout is trustworthy, loyal, helpful, friendly, courteous, kind, obedient, cheerful, thrifty, brave, clean, and reverent.",
+    "skills": [
+      {
+        "icon": "fa-solid fa-tent",
+        "name": "Pioneering & Knots",
+        "desc": "Lashing, timber hitches & temporary shelter setup"
+      },
+      {
+        "icon": "fa-solid fa-person-hiking",
+        "name": "Navigation & Terrain",
+        "desc": "Compass reading, tracking & outdoor endurance"
+      },
+      {
+        "icon": "fa-solid fa-kit-medical",
+        "name": "Emergency First Aid",
+        "desc": "Bandaging, CPR basics & wilderness response"
+      },
+      {
+        "icon": "fa-solid fa-users",
+        "name": "Patrol Leadership",
+        "desc": "Team coordination, parade drills & discipline"
+      }
+    ]
+  },
+  "novel": {
+    "titleUrdu": "سفرِ زیاں",
+    "titleEn": "Safar-e-Zayan",
+    "genre": "Philosophical Fiction & Drama",
+    "status": "In Active Development / Drafting Phase",
+    "synopsis": "'سفرِ زیاں' (Safar-e-Zayan) is an introspective philosophical novel currently in its writing and drafting phase. It delves into the profound journey of a young protagonist traversing life's arduous trials, confronting personal losses (زیاں), exploring the dilemmas between worldly temptations and moral integrity, and ultimately discovering spiritual resilience and purposeful redemption.",
+    "authorNote": "خسارہ سفر کا اختتام نہیں، بلکہ خود شناسی کی ابتدا ہے۔"
+  },
+  "activities": [
+    {
+      "icon": "fa-solid fa-microphone-lines",
+      "title": "Debates & Declamation",
+      "desc": "Passionate orator representing GHS Mazhar Ul Aloom in Urdu & English speech and declamation contests on youth and education.",
+      "themeColor": "gold"
+    },
+    {
+      "icon": "fa-solid fa-flask-vial",
+      "title": "Science Fairs & Exhibitions",
+      "desc": "Demonstrator of physics models and renewable energy prototypes at inter-school science competitions.",
+      "themeColor": "cyan"
+    },
+    {
+      "icon": "fa-solid fa-person-running",
+      "title": "Sports & Physical Fitness",
+      "desc": "Active participant in athletics, physical scouting obstacle drills, and cricket tournaments.",
+      "themeColor": "emerald"
+    },
+    {
+      "icon": "fa-solid fa-clapperboard",
+      "title": "Stage Hosting & Compere",
+      "desc": "Official master of ceremonies and stage host for school morning assemblies, annual days, and national celebrations.",
+      "themeColor": "purple"
+    }
+  ],
+  "contact": {
+    "email": "abbasifta0x@gmail.com",
+    "location": "Fort Abbas, District Bahawalnagar, Punjab, Pakistan",
+    "school": "Government High School Mazhar Ul Aloom Fort Abbas (Class 10th)",
+    "office": "Office of the Student President & CBS Desk"
+  }
+}
